@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi Girls — Salon fryzjersko-kosmetyczny | Mława</title>
+    <meta name="description"
+        content="Hi Girls — salon fryzjersko-kosmetyczny w Mławie. Specjaliści od blondu: koloryzacje, przedłużanie włosów, kosmetyki i makijaż. Umów wizytę online." />
+    <link rel="icon" href="logo.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- Header / navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Główna nawigacja">
+                <a href="#hero" class="brand">
+                    <img src="logo.jpeg" alt="Hi Girls logo" />
+                    <span>
+                        <span class="brand-name">Hi Girls</span><br />
+                        <span class="brand-tag" data-i18n="hero.subtitle">Salon fryzjersko-kosmetyczny w Mławie</span>
+                    </span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#team" data-i18n="nav.team">Poznaj nasz zespół</a></li>
+                    <li><a href="#koloryzacje" data-i18n="nav.koloryzacje">Koloryzacje</a></li>
+                    <li><a href="#przedluzanie" data-i18n="nav.przedluzanie">Przedłużanie włosów</a></li>
+                    <li><a href="#kosmetyki" data-i18n="nav.kosmetyki">Kosmetyki</a></li>
+                    <li><a href="#makijaz" data-i18n="nav.makijaz">Makijaż</a></li>
+                    <li><a href="#cennik" data-i18n="nav.cennik">Cennik</a></li>
+                    <li><a href="#blog" data-i18n="nav.blog">Blog</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="lang-toggle" id="langToggle" data-i18n="lang.toggle"
+                        aria-label="Zmień język">EN</button>
+                    <a href="#booking" class="btn btn-primary" data-i18n="nav.book">Umów wizytę</a>
+                    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Hi Girls</span>
+                    <h1><span data-i18n="hero.titleA">Twój perfekcyjny</span> <span class="accent"
+                            data-i18n="hero.titleAccent">blond</span> <span data-i18n="hero.titleB">w dobrych
+                            rękach</span></h1>
+                    <p class="hero-sub" data-i18n="hero.subtitle">Salon fryzjersko-kosmetyczny w Mławie</p>
+                    <p class="hero-desc" data-i18n="hero.desc">Specjalizujemy się w pięknym, zdrowym blondzie — ale to
+                        nie wszystko, co dla Ciebie mamy.</p>
+                    <div class="hero-actions">
+                        <a href="#booking" class="btn btn-primary" data-i18n="hero.cta">Umów wizytę online</a>
+                        <a href="#cennik" class="btn btn-outline" data-i18n="hero.cta2">Zobacz cennik</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="logo.jpeg" alt="Hi Girls — Blonde Specialists" />
+                    <span class="hero-badge" data-i18n="services.featured">Nasza specjalność</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="team" id="team">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Hi Girls</span>
+                    <h2 data-i18n="team.title">Poznaj nasz zespół</h2>
+                    <p data-i18n="team.subtitle">Ludzie, którzy zadbają o Twoje piękno</p>
+                </div>
+                <div class="grid-team" id="teamGrid"></div>
+            </div>
+        </section>
+
+        <!-- Services (koloryzacje, strzyżenie, przedłużanie, kosmetyki, brwi, makijaż) -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow" data-i18n="team.title">Poznaj nasz zespół</span>
+                    <h2 data-i18n="services.title">Nasze usługi</h2>
+                    <p data-i18n="services.subtitle">Wszystko, czego potrzebujesz w jednym miejscu</p>
+                </div>
+                <div class="services-showcase" id="servicesGrid"></div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="cennik" id="cennik">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Cennik</span>
+                    <h2 data-i18n="cennik.title">Cennik</h2>
+                    <p data-i18n="cennik.subtitle">Ceny orientacyjne — ostateczna wycena po konsultacji</p>
+                </div>
+                <div class="price-groups" id="priceGroups"></div>
+                <p class="note" data-i18n="cennik.note">* Ceny mogą się różnić w zależności od długości i gęstości
+                    włosów.</p>
+            </div>
+        </section>
+
+        <!-- Blog / social CTA -->
+        <section class="blog-band" id="blog">
+            <div class="container">
+                <div class="blog-inner reveal">
+                    <div class="blog-copy">
+                        <span class="eyebrow" data-i18n="blog.eyebrow">Bądź na bieżąco</span>
+                        <h2 data-i18n="blog.title">Zajrzyj na naszego bloga</h2>
+                        <p data-i18n="blog.text">Metamorfozy, inspiracje i porady prosto z naszych social mediów.
+                            Zobacz, co u nas słychać!</p>
+                        <a href="#" id="blogLink" class="btn btn-primary" target="_blank" rel="noopener"
+                            data-i18n="blog.cta">Odwiedź bloga</a>
+                    </div>
+                    <div class="blog-visual" aria-hidden="true">
+                        <span>📸</span><span>✨</span><span>💇‍♀️</span><span>💛</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking -->
+        <section class="booking" id="booking">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow" data-i18n="nav.book">Umów wizytę</span>
+                    <h2 data-i18n="booking.title">Umów wizytę</h2>
+                    <p data-i18n="booking.subtitle">Zarezerwuj termin online — bez dzwonienia.</p>
+                </div>
+
+                <div class="booking-wrap">
+                    <div class="booking-tabs" role="tablist">
+                        <button class="booking-tab active" id="tabCustomer" role="tab" aria-selected="true"
+                            data-i18n="booking.tabCustomer">Rezerwacja online</button>
+                        <button class="booking-tab" id="tabStaff" role="tab" aria-selected="false"
+                            data-i18n="booking.tabStaff">Panel pracownika</button>
+                    </div>
+
+                    <!-- Customer booking panel -->
+                    <div class="booking-panel" id="panelCustomer" role="tabpanel">
+                        <form id="customerForm" novalidate>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="c-name" data-i18n="booking.name">Imię i nazwisko</label>
+                                    <input type="text" id="c-name" name="name" autocomplete="name" required />
+                                </div>
+                                <div class="field">
+                                    <label for="c-phone" data-i18n="booking.phone">Telefon</label>
+                                    <input type="tel" id="c-phone" name="phone" autocomplete="tel" required />
+                                </div>
+                                <div class="field full">
+                                    <label for="c-email" data-i18n="booking.email">E-mail (opcjonalnie)</label>
+                                    <input type="email" id="c-email" name="email" autocomplete="email" />
+                                </div>
+                                <div class="field">
+                                    <label for="c-service" data-i18n="booking.service">Usługa</label>
+                                    <select id="c-service" name="service" data-role="service" required></select>
+                                </div>
+                                <div class="field">
+                                    <label for="c-stylist" data-i18n="booking.stylist">Specjalista</label>
+                                    <select id="c-stylist" name="stylist" data-role="stylist"></select>
+                                </div>
+                                <div class="field">
+                                    <label for="c-date" data-i18n="booking.date">Data</label>
+                                    <input type="date" id="c-date" name="date" data-role="date" required />
+                                </div>
+                                <div class="field">
+                                    <label for="c-time" data-i18n="booking.time">Godzina</label>
+                                    <select id="c-time" name="time" data-role="time" required></select>
+                                </div>
+                                <div class="field full">
+                                    <label for="c-notes" data-i18n="booking.notes">Uwagi (opcjonalnie)</label>
+                                    <textarea id="c-notes" name="notes"></textarea>
+                                </div>
+                            </div>
+                            <p class="form-msg" id="customerMsg" hidden></p>
+                            <div style="margin-top:20px">
+                                <button type="submit" class="btn btn-primary btn-block"
+                                    data-i18n="booking.submit">Zarezerwuj wizytę</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Staff panel -->
+                    <div class="booking-panel" id="panelStaff" role="tabpanel" hidden>
+                        <div class="pin-gate" id="pinGate">
+                            <p data-i18n="staff.pinPrompt">Podaj PIN pracownika, aby uzyskać dostęp.</p>
+                            <form id="pinForm">
+                                <div class="field">
+                                    <label for="s-pin" data-i18n="staff.pinLabel">PIN</label>
+                                    <input type="password" id="s-pin" inputmode="numeric" autocomplete="off" />
+                                </div>
+                                <p class="form-msg error" id="pinMsg" hidden></p>
+                                <div style="margin-top:16px">
+                                    <button type="submit" class="btn btn-primary btn-block"
+                                        data-i18n="staff.pinSubmit">Zaloguj</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="staff-content" id="staffContent" hidden>
+                            <div class="staff-toolbar">
+                                <h4 data-i18n="staff.newBooking">Dodaj rezerwację dla klienta</h4>
+                                <button class="link-btn" id="staffLogout" data-i18n="staff.logout">Wyloguj</button>
+                            </div>
+                            <form id="staffForm" novalidate>
+                                <div class="form-grid">
+                                    <div class="field">
+                                        <label for="s-name" data-i18n="booking.name">Imię i nazwisko</label>
+                                        <input type="text" id="s-name" name="name" required />
+                                    </div>
+                                    <div class="field">
+                                        <label for="s-phone" data-i18n="booking.phone">Telefon</label>
+                                        <input type="tel" id="s-phone" name="phone" required />
+                                    </div>
+                                    <div class="field">
+                                        <label for="s-service" data-i18n="booking.service">Usługa</label>
+                                        <select id="s-service" name="service" data-role="service" required></select>
+                                    </div>
+                                    <div class="field">
+                                        <label for="s-stylist" data-i18n="booking.stylist">Specjalista</label>
+                                        <select id="s-stylist" name="stylist" data-role="stylist"></select>
+                                    </div>
+                                    <div class="field">
+                                        <label for="s-date" data-i18n="booking.date">Data</label>
+                                        <input type="date" id="s-date" name="date" data-role="date" required />
+                                    </div>
+                                    <div class="field">
+                                        <label for="s-time" data-i18n="booking.time">Godzina</label>
+                                        <select id="s-time" name="time" data-role="time" required></select>
+                                    </div>
+                                    <div class="field full">
+                                        <label for="s-notes" data-i18n="booking.notes">Uwagi (opcjonalnie)</label>
+                                        <textarea id="s-notes" name="notes"></textarea>
+                                    </div>
+                                </div>
+                                <p class="form-msg" id="staffMsg" hidden></p>
+                                <div style="margin-top:16px">
+                                    <button type="submit" class="btn btn-primary btn-block"
+                                        data-i18n="booking.submit">Zarezerwuj wizytę</button>
+                                </div>
+                            </form>
+
+                            <hr class="staff-divider" />
+                            <div class="staff-toolbar">
+                                <h4 data-i18n="staff.list">Nadchodzące wizyty</h4>
+                            </div>
+                            <div class="booking-list" id="bookingList"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow" data-i18n="contact.findUs">Znajdź nas</span>
+                    <h2 data-i18n="contact.title">Kontakt</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 data-i18n="contact.address">Adres</h3>
+                        <p id="contactAddress"></p>
+                        <p><a href="#" id="contactPhone"></a><br /><a href="#" id="contactEmail"></a></p>
+                        <div class="contact-socials">
+                            <a href="#" id="socialIg" target="_blank" rel="noopener">Instagram</a>
+                            <a href="#" id="socialFb" target="_blank" rel="noopener">Facebook</a>
+                        </div>
+                        <h3 data-i18n="contact.hours">Godziny otwarcia</h3>
+                        <ul class="hours-list" id="hoursList"></ul>
+                    </div>
+                    <div class="contact-map">
+                        <iframe id="mapFrame" title="Hi Girls — mapa" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div>
+                <span class="brand-name">Hi Girls</span>
+                <span class="brand-tag">Blonde Specialists</span>
+            </div>
+            <small>&copy; <span id="year"></span> Hi Girls. <span data-i18n="footer.rights">Wszelkie prawa
+                    zastrzeżone.</span></small>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
