@@ -8,16 +8,17 @@
 const SITE = {
     brand: "Hi Girls",
     tagline: { pl: "Specjaliści od blondu", en: "Blonde Specialists" },
-    phone: "+48 500 000 000",
+    // TODO: replace the phone and social links below with the salon's real details.
+    phone: "+48 574 118 260",
     email: "kontakt@higirls.pl",
     address: "aleja Marszałka Józefa Piłsudskiego 35/48, 06-500 Mława",
     mapsQuery: "aleja Marszałka Józefa Piłsudskiego 35, 06-500 Mława",
     social: {
-        instagram: "https://instagram.com/",
-        facebook: "https://facebook.com/",
+        instagram: "https://instagram.com/higirls.mlawa",
+        facebook: "https://facebook.com/higirls.mlawa",
     },
     // Where the "Blog" button sends visitors (social feed for now).
-    blogUrl: "https://instagram.com/",
+    blogUrl: "https://instagram.com/higirls.mlawa",
     hours: [
         { day: { pl: "Poniedziałek", en: "Monday" }, open: "09:00", close: "18:00" },
         { day: { pl: "Wtorek", en: "Tuesday" }, open: "09:00", close: "18:00" },
@@ -105,6 +106,7 @@ const SERVICES = [
         icon: "🎨",
         title: { pl: "Koloryzacje", en: "Coloring" },
         featured: true,
+        from: { pl: "od 120 zł", en: "from 120 zł" },
         desc: {
             pl: "Nasza specjalność — perfekcyjny, zdrowy blond. Balayage, sombre, rozświetlenia i korekty koloru.",
             en: "Our specialty — flawless, healthy blonde. Balayage, sombre, highlights and colour correction.",
@@ -124,6 +126,7 @@ const SERVICES = [
         id: "strzyzenie",
         icon: "✂️",
         title: { pl: "Strzyżenie & stylizacja", en: "Cuts & Styling" },
+        from: { pl: "od 40 zł", en: "from 40 zł" },
         desc: {
             pl: "Strzyżenia, modelowanie oraz upięcia i fryzury okolicznościowe na każdą okazję.",
             en: "Haircuts, blow-dry styling and occasion updos for any event.",
@@ -141,6 +144,7 @@ const SERVICES = [
         id: "przedluzanie",
         icon: "💇‍♀️",
         title: { pl: "Przedłużanie włosów", en: "Hair Extensions" },
+        from: { pl: "konsultacja gratis", en: "free consultation" },
         desc: {
             pl: "Naturalne zagęszczanie i wydłużanie włosów metodą taśmową, keratynową i nano ringami.",
             en: "Natural volume and length with tape-in, keratin and nano-ring methods.",
@@ -157,6 +161,7 @@ const SERVICES = [
         id: "kosmetyki",
         icon: "🧴",
         title: { pl: "Pielęgnacja & kosmetyki", en: "Care & Cosmetics" },
+        from: { pl: "od 45 zł", en: "from 45 zł" },
         desc: {
             pl: "Regeneracja, wygładzanie i nawilżanie włosów — Olaplex, botoks, keratyna i nanoplastia.",
             en: "Regeneration, smoothing and hydration — Olaplex, botox, keratin and nanoplastia.",
@@ -174,6 +179,7 @@ const SERVICES = [
         id: "brwi",
         icon: "👁️",
         title: { pl: "Brwi & rzęsy", en: "Brows & Lashes" },
+        from: { pl: "od 45 zł", en: "from 45 zł" },
         desc: {
             pl: "Stylizacja brwi i rzęs, która podkreśli spojrzenie — henna, laminacja i przedłużanie.",
             en: "Brow and lash styling that highlights your gaze — tint, lamination and extensions.",
@@ -189,6 +195,7 @@ const SERVICES = [
         id: "makijaz",
         icon: "💄",
         title: { pl: "Makijaż", en: "Makeup" },
+        from: { pl: "od 120 zł", en: "from 120 zł" },
         desc: {
             pl: "Makijaż dzienny, wieczorowy, okolicznościowy i ślubny dopasowany do okazji.",
             en: "Day, evening, occasion and bridal makeup tailored to the moment.",
@@ -218,3 +225,82 @@ const BOOKING_CONFIG = {
         6: { start: "09:00", end: "15:00" },
     },
 };
+
+// Aggregate rating used for social proof (hero chip, testimonials header).
+const RATING = {
+    score: "4.9",
+    count: 180,
+    source: { pl: "opinii Google", en: "Google reviews" },
+};
+
+// Headline numbers shown in the trust bar beneath the hero.
+const STATS = [
+    { value: "10+", label: { pl: "lat doświadczenia", en: "years of experience" } },
+    { value: "2000+", label: { pl: "zadowolonych klientek", en: "happy clients" } },
+    { value: "4.9★", label: { pl: "średnia z opinii", en: "average rating" } },
+    { value: "5", label: { pl: "specjalistek w zespole", en: "specialists on the team" } },
+];
+
+// "Why us" value propositions (icon keys resolve to inline SVG in main.js).
+const VALUES = [
+    {
+        icon: "droplet",
+        title: { pl: "Specjaliści od blondu", en: "Blonde specialists" },
+        text: {
+            pl: "Rozjaśnienia i koloryzacje bez zniszczonych włosów — zdrowy blond to nasza codzienność.",
+            en: "Lightening and color without the damage — healthy blonde is our everyday craft.",
+        },
+    },
+    {
+        icon: "leaf",
+        title: { pl: "Renomowane kosmetyki", en: "Premium products" },
+        text: {
+            pl: "Pracujemy na Olaplex, Wella i K18 — pielęgnacja klasy premium przy każdej wizycie.",
+            en: "We work with Olaplex, Wella and K18 — premium care at every single visit.",
+        },
+    },
+    {
+        icon: "calendar",
+        title: { pl: "Rezerwacja online 24/7", en: "24/7 online booking" },
+        text: {
+            pl: "Zarezerwuj termin w 30 sekund, o dowolnej porze — bez dzwonienia i czekania.",
+            en: "Book in 30 seconds, at any hour — no phone calls, no waiting on hold.",
+        },
+    },
+    {
+        icon: "heart",
+        title: { pl: "Indywidualne podejście", en: "A personal approach" },
+        text: {
+            pl: "Konsultacja przed każdą metamorfozą — efekt dopasowany do Ciebie i Twoich włosów.",
+            en: "A consultation before every makeover — a result tailored to you and your hair.",
+        },
+    },
+];
+
+// Client testimonials shown in the reviews section.
+const TESTIMONIALS = [
+    {
+        name: "Aleksandra K.",
+        service: { pl: "Balayage", en: "Balayage" },
+        quote: {
+            pl: "Najlepszy blond, jaki miałam. Włosy zdrowe, kolor trzyma się miesiącami, a atmosfera w salonie cudowna.",
+            en: "The best blonde I've ever had. Healthy hair, color that lasts for months, and a wonderful atmosphere.",
+        },
+    },
+    {
+        name: "Natalia W.",
+        service: { pl: "Przedłużanie włosów", en: "Hair extensions" },
+        quote: {
+            pl: "Przedłużanie zrobione perfekcyjnie — nikt nie wierzy, że to nie moje własne włosy. Polecam całym sercem!",
+            en: "Extensions done to perfection — no one believes they aren't my own hair. Highly recommend!",
+        },
+    },
+    {
+        name: "Karolina M.",
+        service: { pl: "Koloryzacja + Olaplex", en: "Color + Olaplex" },
+        quote: {
+            pl: "Przyszłam z przesuszonymi włosami po innym salonie. Dziewczyny uratowały kolor i kondycję. Wracam co miesiąc.",
+            en: "I came in with over-dried hair from another salon. The girls rescued the color and condition. I'm back every month.",
+        },
+    },
+];

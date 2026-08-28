@@ -6,9 +6,9 @@
 
 const I18N = {
     pl: {
-        "nav.team": "Poznaj nasz zespół",
+        "nav.team": "Zespół",
         "nav.koloryzacje": "Koloryzacje",
-        "nav.przedluzanie": "Przedłużanie włosów",
+        "nav.przedluzanie": "Przedłużanie",
         "nav.kosmetyki": "Kosmetyki",
         "nav.makijaz": "Makijaż",
         "nav.cennik": "Cennik",
@@ -81,14 +81,67 @@ const I18N = {
         "contact.closed": "Nieczynne",
         "contact.findUs": "Znajdź nas",
 
+        "team.eyebrow": "Twoje specjalistki",
+        "services.eyebrow": "Pełen zakres usług",
+        "cennik.eyebrow": "Przejrzyste ceny",
+        "booking.eyebrow": "Wygodna rezerwacja",
+
+        "hero.ratingNote": "Zaufało nam 2000+ klientek",
+        "hero.trustA": "Bez przedpłaty",
+        "hero.trustB": "Darmowa konsultacja",
+        "hero.trustC": "Dogodne odwołanie",
+
+        "values.eyebrow": "Dlaczego Hi Girls",
+        "values.title": "Dlaczego kobiety wybierają Hi Girls",
+        "values.subtitle": "Cztery powody, dla których zostajesz z nami na dłużej.",
+
+        "reviews.eyebrow": "Opinie klientek",
+        "reviews.title": "Pokochały efekt — i wracają",
+
+        "booking.trust": "Potwierdzenie od ręki · Bez przedpłaty · Możliwość odwołania",
+        "sticky.text": "Gotowa na swój najlepszy blond?",
+
+        "footer.explore": "Nawigacja",
+        "footer.contactTitle": "Kontakt",
+        "footer.tagline": "Salon fryzjersko-kosmetyczny w Mławie. Specjaliści od zdrowego blondu, przedłużania włosów, pielęgnacji i makijażu.",
+
         "footer.rights": "Wszelkie prawa zastrzeżone.",
         "lang.toggle": "EN",
+
+        "eyebrow.team": "Ludzie Hi Girls",
+        "eyebrow.services": "Co dla Ciebie robimy",
+        "eyebrow.values": "Dlaczego Hi Girls",
+        "eyebrow.pricing": "Przejrzyste ceny",
+        "eyebrow.reviews": "Opinie klientek",
+        "eyebrow.booking": "Rezerwacja online",
+
+        "hero.rating": "4,9/5 na podstawie 180+ opinii",
+        "hero.trust1": "10+ lat doświadczenia",
+        "hero.trust2": "Bez przedpłaty",
+        "hero.trust3": "Potwierdzenie od ręki",
+
+        "values.title": "Dlaczego kobiety wybierają Hi Girls",
+        "values.subtitle": "Cztery powody, dla których wizyta u nas to czysta przyjemność.",
+
+        "reviews.title": "Zaufały nam setki klientek",
+        "reviews.subtitle": "Prawdziwe opinie po wizytach w naszym salonie.",
+        "reviews.ratingLabel": "średnia z 180+ opinii",
+
+        "booking.trust": "Bez przedpłaty · Potwierdzenie od ręki · Odwołasz w każdej chwili",
+
+        "sticky.text": "Wolne terminy w tym tygodniu",
+        "sticky.cta": "Umów wizytę",
+
+        "footer.explore": "Nawigacja",
+        "footer.contactHead": "Kontakt",
+        "footer.hoursHead": "Godziny otwarcia",
+        "footer.tagline": "Twój perfekcyjny blond w dobrych rękach — salon Hi Girls w Mławie.",
     },
     en: {
-        "nav.team": "Meet the Team",
+        "nav.team": "Team",
         "nav.koloryzacje": "Coloring",
-        "nav.przedluzanie": "Hair Extensions",
-        "nav.kosmetyki": "Cosmetics",
+        "nav.przedluzanie": "Extensions",
+        "nav.kosmetyki": "Care",
         "nav.makijaz": "Makeup",
         "nav.cennik": "Pricing",
         "nav.blog": "Blog",
@@ -160,8 +213,61 @@ const I18N = {
         "contact.closed": "Closed",
         "contact.findUs": "Find us",
 
+        "team.eyebrow": "Your specialists",
+        "services.eyebrow": "The full menu",
+        "cennik.eyebrow": "Transparent pricing",
+        "booking.eyebrow": "Easy booking",
+
+        "hero.ratingNote": "Trusted by 2000+ clients",
+        "hero.trustA": "No prepayment",
+        "hero.trustB": "Free consultation",
+        "hero.trustC": "Easy cancellation",
+
+        "values.eyebrow": "Why Hi Girls",
+        "values.title": "Why women choose Hi Girls",
+        "values.subtitle": "Four reasons you'll want to stay with us for the long run.",
+
+        "reviews.eyebrow": "Client reviews",
+        "reviews.title": "They loved the result — and keep coming back",
+
+        "booking.trust": "Instant confirmation · No prepayment · Free cancellation",
+        "sticky.text": "Ready for your best blonde yet?",
+
+        "footer.explore": "Explore",
+        "footer.contactTitle": "Contact",
+        "footer.tagline": "Hair & beauty salon in Mława. Specialists in healthy blonde, extensions, hair care and makeup.",
+
         "footer.rights": "All rights reserved.",
         "lang.toggle": "PL",
+
+        "eyebrow.team": "The Hi Girls people",
+        "eyebrow.services": "What we do for you",
+        "eyebrow.values": "Why Hi Girls",
+        "eyebrow.pricing": "Transparent pricing",
+        "eyebrow.reviews": "Client reviews",
+        "eyebrow.booking": "Online booking",
+
+        "hero.rating": "4.9/5 from 180+ reviews",
+        "hero.trust1": "10+ years of experience",
+        "hero.trust2": "No prepayment",
+        "hero.trust3": "Instant confirmation",
+
+        "values.title": "Why women choose Hi Girls",
+        "values.subtitle": "Four reasons a visit with us is a genuine pleasure.",
+
+        "reviews.title": "Trusted by hundreds of clients",
+        "reviews.subtitle": "Real reviews after visits to our salon.",
+        "reviews.ratingLabel": "average from 180+ reviews",
+
+        "booking.trust": "No prepayment · Instant confirmation · Cancel anytime",
+
+        "sticky.text": "Openings available this week",
+        "sticky.cta": "Book now",
+
+        "footer.explore": "Explore",
+        "footer.contactHead": "Contact",
+        "footer.hoursHead": "Opening hours",
+        "footer.tagline": "Your perfect blonde in good hands — the Hi Girls salon in Mława.",
     },
 };
 

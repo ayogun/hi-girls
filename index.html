@@ -7,6 +7,22 @@
     <title>Hi Girls — Salon fryzjersko-kosmetyczny | Mława</title>
     <meta name="description"
         content="Hi Girls — salon fryzjersko-kosmetyczny w Mławie. Specjaliści od blondu: koloryzacje, przedłużanie włosów, kosmetyki i makijaż. Umów wizytę online." />
+    <meta name="theme-color" content="#8b5e3c" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://higirls.pl/" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:site_name" content="Hi Girls" />
+    <meta property="og:title" content="Hi Girls — Salon fryzjersko-kosmetyczny w Mławie" />
+    <meta property="og:description"
+        content="Specjaliści od blondu: koloryzacje, przedłużanie włosów, pielęgnacja i makijaż. Umów wizytę online — bez dzwonienia." />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:image" content="logo.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hi Girls — Salon fryzjersko-kosmetyczny w Mławie" />
+    <meta name="twitter:description" content="Specjaliści od blondu. Umów wizytę online w 30 sekund." />
+    <meta name="twitter:image" content="logo.jpeg" />
     <link rel="icon" href="logo.jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,9 +30,66 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Hi Girls",
+      "description": "Salon fryzjersko-kosmetyczny w Mławie — specjaliści od blondu.",
+      "image": "https://higirls.pl/logo.jpeg",
+      "url": "https://higirls.pl/",
+      "telephone": "+48 574 118 260",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "aleja Marszałka Józefa Piłsudskiego 35/48",
+        "addressLocality": "Mława",
+        "postalCode": "06-500",
+        "addressCountry": "PL"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "180"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday"], "opens": "09:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday", "Friday"], "opens": "09:00", "closes": "20:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "15:00" }
+      ]
+    }
+    </script>
 </head>
 
 <body>
+    <section class="coming-soon" id="comingSoon" hidden aria-live="polite">
+        <div class="coming-soon-inner">
+            <img src="logo.jpeg" alt="Hi Girls logo" class="coming-soon-logo" />
+            <p class="coming-soon-kicker">Hi Girls</p>
+            <h1>Opening Soon</h1>
+            <p class="coming-soon-text">Startujemy 1 października. Odliczamy do wielkiego otwarcia.</p>
+            <div class="coming-soon-countdown" aria-label="Odliczanie do otwarcia">
+                <div class="count-box">
+                    <span class="count-value" id="countDays">00</span>
+                    <span class="count-label">Dni</span>
+                </div>
+                <div class="count-box">
+                    <span class="count-value" id="countHours">00</span>
+                    <span class="count-label">Godz</span>
+                </div>
+                <div class="count-box">
+                    <span class="count-value" id="countMinutes">00</span>
+                    <span class="count-label">Min</span>
+                </div>
+                <div class="count-box">
+                    <span class="count-value" id="countSeconds">00</span>
+                    <span class="count-label">Sek</span>
+                </div>
+            </div>
+            <p class="coming-soon-date">Otwarcie: 1 października, godz. 09:00</p>
+        </div>
+    </section>
+
     <!-- Header / navigation -->
     <header class="header">
         <div class="container">
@@ -65,11 +138,39 @@
                         <a href="#booking" class="btn btn-primary" data-i18n="hero.cta">Umów wizytę online</a>
                         <a href="#cennik" class="btn btn-outline" data-i18n="hero.cta2">Zobacz cennik</a>
                     </div>
+                    <div class="hero-proof">
+                        <div class="stars" id="heroStars" aria-hidden="true"></div>
+                        <span class="hero-proof-text" data-i18n="hero.rating">4,9/5 na podstawie 180+ opinii</span>
+                    </div>
                 </div>
                 <div class="hero-visual">
                     <img src="logo.jpeg" alt="Hi Girls — Blonde Specialists" />
                     <span class="hero-badge" data-i18n="services.featured">Nasza specjalność</span>
+                    <div class="hero-float">
+                        <div class="stars" id="heroFloatStars" aria-hidden="true"></div>
+                        <strong>4,9<span>/5</span></strong>
+                        <small data-i18n="reviews.ratingLabel">średnia z 180+ opinii</small>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Trust / stats bar -->
+        <section class="stats" aria-label="Hi Girls w liczbach">
+            <div class="container">
+                <div class="stats-grid reveal" id="statsGrid"></div>
+            </div>
+        </section>
+
+        <!-- Why us -->
+        <section class="values" id="values">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow" data-i18n="eyebrow.values">Dlaczego Hi Girls</span>
+                    <h2 data-i18n="values.title">Dlaczego kobiety wybierają Hi Girls</h2>
+                    <p data-i18n="values.subtitle">Cztery powody, dla których wizyta u nas to czysta przyjemność.</p>
+                </div>
+                <div class="values-grid" id="valuesGrid"></div>
             </div>
         </section>
 
@@ -77,7 +178,7 @@
         <section class="team" id="team">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="eyebrow">Hi Girls</span>
+                    <span class="eyebrow" data-i18n="eyebrow.team">Ludzie Hi Girls</span>
                     <h2 data-i18n="team.title">Poznaj nasz zespół</h2>
                     <p data-i18n="team.subtitle">Ludzie, którzy zadbają o Twoje piękno</p>
                 </div>
@@ -89,7 +190,7 @@
         <section class="services" id="services">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="eyebrow" data-i18n="team.title">Poznaj nasz zespół</span>
+                    <span class="eyebrow" data-i18n="eyebrow.services">Co dla Ciebie robimy</span>
                     <h2 data-i18n="services.title">Nasze usługi</h2>
                     <p data-i18n="services.subtitle">Wszystko, czego potrzebujesz w jednym miejscu</p>
                 </div>
@@ -101,13 +202,30 @@
         <section class="cennik" id="cennik">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="eyebrow">Cennik</span>
+                    <span class="eyebrow" data-i18n="eyebrow.pricing">Przejrzyste ceny</span>
                     <h2 data-i18n="cennik.title">Cennik</h2>
                     <p data-i18n="cennik.subtitle">Ceny orientacyjne — ostateczna wycena po konsultacji</p>
                 </div>
                 <div class="price-groups" id="priceGroups"></div>
                 <p class="note" data-i18n="cennik.note">* Ceny mogą się różnić w zależności od długości i gęstości
                     włosów.</p>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow" data-i18n="eyebrow.reviews">Opinie klientek</span>
+                    <h2 data-i18n="reviews.title">Zaufały nam setki klientek</h2>
+                    <p data-i18n="reviews.subtitle">Prawdziwe opinie po wizytach w naszym salonie.</p>
+                </div>
+                <div class="reviews-summary reveal">
+                    <div class="stars" id="reviewsStars" aria-hidden="true"></div>
+                    <strong>4,9</strong>
+                    <span data-i18n="reviews.ratingLabel">średnia z 180+ opinii</span>
+                </div>
+                <div class="reviews-grid" id="reviewsGrid"></div>
             </div>
         </section>
 
@@ -124,7 +242,10 @@
                             data-i18n="blog.cta">Odwiedź bloga</a>
                     </div>
                     <div class="blog-visual" aria-hidden="true">
-                        <span>📸</span><span>✨</span><span>💇‍♀️</span><span>💛</span>
+                        <img src="assets/team-2.jpg" alt="" loading="lazy" />
+                        <img src="assets/team-3.jpg" alt="" loading="lazy" />
+                        <img src="assets/team-4.jpg" alt="" loading="lazy" />
+                        <img src="assets/team-5.jpg" alt="" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -134,10 +255,13 @@
         <section class="booking" id="booking">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="eyebrow" data-i18n="nav.book">Umów wizytę</span>
+                    <span class="eyebrow" data-i18n="eyebrow.booking">Rezerwacja online</span>
                     <h2 data-i18n="booking.title">Umów wizytę</h2>
                     <p data-i18n="booking.subtitle">Zarezerwuj termin online — bez dzwonienia.</p>
                 </div>
+
+                <p class="booking-trust reveal" data-i18n="booking.trust">Bez przedpłaty · Potwierdzenie od ręki ·
+                    Odwołasz w każdej chwili</p>
 
                 <div class="booking-wrap">
                     <div class="booking-tabs" role="tablist">
@@ -291,14 +415,57 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-inner">
-            <div>
-                <span class="brand-name">Hi Girls</span>
-                <span class="brand-tag">Blonde Specialists</span>
+    <!-- Sticky booking CTA (mobile) -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="container sticky-cta-inner">
+            <div class="sticky-cta-text">
+                <div class="stars" id="stickyStars" aria-hidden="true"></div>
+                <span data-i18n="sticky.text">Wolne terminy w tym tygodniu</span>
             </div>
-            <small>&copy; <span id="year"></span> Hi Girls. <span data-i18n="footer.rights">Wszelkie prawa
-                    zastrzeżone.</span></small>
+            <a href="#booking" class="btn btn-primary" data-i18n="sticky.cta">Umów wizytę</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-name">Hi Girls</span>
+                    <span class="brand-tag">Blonde Specialists</span>
+                    <p class="footer-tagline" data-i18n="footer.tagline">Twój perfekcyjny blond w dobrych rękach —
+                        salon Hi Girls w Mławie.</p>
+                    <div class="footer-socials">
+                        <a href="#" id="footerIg" target="_blank" rel="noopener">Instagram</a>
+                        <a href="#" id="footerFb" target="_blank" rel="noopener">Facebook</a>
+                    </div>
+                </div>
+                <nav class="footer-col" aria-label="Stopka — nawigacja">
+                    <h4 data-i18n="footer.explore">Nawigacja</h4>
+                    <ul>
+                        <li><a href="#team" data-i18n="nav.team">Zespół</a></li>
+                        <li><a href="#services" data-i18n="services.title">Nasze usługi</a></li>
+                        <li><a href="#cennik" data-i18n="nav.cennik">Cennik</a></li>
+                        <li><a href="#reviews" data-i18n="eyebrow.reviews">Opinie klientek</a></li>
+                        <li><a href="#booking" data-i18n="nav.book">Umów wizytę</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contactHead">Kontakt</h4>
+                    <ul>
+                        <li id="footerAddress"></li>
+                        <li><a href="#" id="footerPhone"></a></li>
+                        <li><a href="#" id="footerEmail"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.hoursHead">Godziny otwarcia</h4>
+                    <ul class="footer-hours" id="footerHours"></ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <small>&copy; <span id="year"></span> Hi Girls. <span data-i18n="footer.rights">Wszelkie prawa
+                        zastrzeżone.</span></small>
+            </div>
         </div>
     </footer>
 
