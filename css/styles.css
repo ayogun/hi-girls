@@ -143,6 +143,45 @@ body.coming-soon-active .footer {
     font-weight: 600;
 }
 
+.coming-soon-actions {
+    margin: 26px 0 12px;
+}
+
+.coming-soon-note {
+    margin: 0 0 22px;
+    color: var(--muted);
+    font-size: .92rem;
+}
+
+.coming-soon-note a {
+    color: var(--bronze);
+    font-weight: 600;
+}
+
+.coming-soon-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 22px;
+}
+
+.coming-soon-socials a {
+    background: var(--white);
+    border: 1px solid rgba(139, 94, 60, .18);
+    color: var(--bronze);
+    padding: 9px 18px;
+    border-radius: 999px;
+    font-size: .88rem;
+    font-weight: 600;
+    transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+
+.coming-soon-socials a:hover {
+    background: var(--bronze);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
 h1,
 h2,
 h3 {

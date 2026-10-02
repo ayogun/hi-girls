@@ -14,11 +14,11 @@ const SITE = {
     address: "aleja Marszałka Józefa Piłsudskiego 35/48, 06-500 Mława",
     mapsQuery: "aleja Marszałka Józefa Piłsudskiego 35, 06-500 Mława",
     social: {
-        instagram: "https://instagram.com/higirls.mlawa",
-        facebook: "https://facebook.com/higirls.mlawa",
+        instagram: "https://instagram.com/higirls.hairsalon",
+        facebook: "https://facebook.com/higirls.hairsalon",
     },
     // Where the "Blog" button sends visitors (social feed for now).
-    blogUrl: "https://instagram.com/higirls.mlawa",
+    blogUrl: "https://instagram.com/higirls.hairsalon",
     hours: [
         { day: { pl: "Poniedziałek", en: "Monday" }, open: "09:00", close: "18:00" },
         { day: { pl: "Wtorek", en: "Tuesday" }, open: "09:00", close: "18:00" },
