@@ -9,7 +9,7 @@ const SITE = {
     brand: "Hi Girls",
     tagline: { pl: "Specjaliści od blondu", en: "Blonde Specialists" },
     // TODO: replace the phone and social links below with the salon's real details.
-    phone: "+48 574 118 260",
+    phone: "+48 538 423 793",
     email: "kontakt@higirls.pl",
     address: "aleja Marszałka Józefa Piłsudskiego 35/48, 06-500 Mława",
     mapsQuery: "aleja Marszałka Józefa Piłsudskiego 35, 06-500 Mława",

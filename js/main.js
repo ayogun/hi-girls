@@ -437,47 +437,9 @@
         const gate = $("#comingSoon");
         if (!gate) return false;
 
-        const now = new Date();
-        const targetYear = now.getFullYear();
-        const openingDate = new Date(targetYear, 9, 1, 9, 0, 0, 0); // Oct 1, 09:00 local time
-
-        if (now >= openingDate) {
-            gate.hidden = true;
-            document.body.classList.remove("coming-soon-active");
-            return false;
-        }
-
-        const daysEl = $("#countDays");
-        const hoursEl = $("#countHours");
-        const minutesEl = $("#countMinutes");
-        const secondsEl = $("#countSeconds");
-        const pad = (n) => String(n).padStart(2, "0");
-
-        function renderCountdown() {
-            const diffMs = openingDate.getTime() - Date.now();
-            if (diffMs <= 0) {
-                gate.hidden = true;
-                document.body.classList.remove("coming-soon-active");
-                window.location.reload();
-                return;
-            }
-
-            const totalSeconds = Math.floor(diffMs / 1000);
-            const days = Math.floor(totalSeconds / 86400);
-            const hours = Math.floor((totalSeconds % 86400) / 3600);
-            const minutes = Math.floor((totalSeconds % 3600) / 60);
-            const seconds = totalSeconds % 60;
-
-            daysEl.textContent = String(days);
-            hoursEl.textContent = pad(hours);
-            minutesEl.textContent = pad(minutes);
-            secondsEl.textContent = pad(seconds);
-        }
-
+        // Site not ready yet — keep everything behind the "under construction" gate.
         document.body.classList.add("coming-soon-active");
         gate.hidden = false;
-        renderCountdown();
-        window.setInterval(renderCountdown, 1000);
         return true;
     }
 
