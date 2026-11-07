@@ -21,7 +21,7 @@
     <meta property="og:image" content="logo.jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Hi Girls — Salon fryzjersko-kosmetyczny w Mławie" />
-    <meta name="twitter:description" content="Specjaliści od blondu. Umów wizytę online w 30 sekund." />
+    <meta name="twitter:description" content="Specjaliści od blondu. Umów wizytę online w Saloner." />
     <meta name="twitter:image" content="logo.jpeg" />
     <link rel="icon" href="logo.jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,11 +47,6 @@
         "postalCode": "06-500",
         "addressCountry": "PL"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "180"
-      },
       "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday"], "opens": "09:00", "closes": "18:00" },
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday", "Friday"], "opens": "09:00", "closes": "20:00" },
@@ -61,8 +56,8 @@
     </script>
 </head>
 
-<body class="coming-soon-active">
-    <section class="coming-soon" id="comingSoon" aria-live="polite">
+<body>
+    <section class="coming-soon" id="comingSoon" aria-live="polite" hidden>
         <div class="coming-soon-inner">
             <img src="logo.jpeg" alt="Hi Girls logo" class="coming-soon-logo" />
             <p class="coming-soon-kicker">Hi Girls</p>
@@ -85,6 +80,12 @@
 
     <!-- Header / navigation -->
     <header class="header">
+        <nav class="quick-contact container" aria-label="Kontakt i rezerwacja">
+            <a href="https://instagram.com/higirls.hairsalon" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://facebook.com/higirls.hairsalon" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://saloner.pl/salon/hi-girls-7" data-i18n="nav.book">Umów wizytę</a>
+            <a href="tel:+48538423793">538 423 793</a>
+        </nav>
         <div class="container">
             <nav class="nav" aria-label="Główna nawigacja">
                 <a href="#hero" class="brand">
@@ -106,7 +107,8 @@
                 <div class="nav-actions">
                     <button class="lang-toggle" id="langToggle" data-i18n="lang.toggle"
                         aria-label="Zmień język">EN</button>
-                    <a href="#booking" class="btn btn-primary" data-i18n="nav.book">Umów wizytę</a>
+                    <a href="https://saloner.pl/salon/hi-girls-7" class="btn btn-primary" data-i18n="nav.book">Umów
+                        wizytę</a>
                     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
                         <span></span><span></span><span></span>
                     </button>
@@ -128,12 +130,13 @@
                     <p class="hero-desc" data-i18n="hero.desc">Specjalizujemy się w pięknym, zdrowym blondzie — ale to
                         nie wszystko, co dla Ciebie mamy.</p>
                     <div class="hero-actions">
-                        <a href="#booking" class="btn btn-primary" data-i18n="hero.cta">Umów wizytę online</a>
+                        <a href="https://saloner.pl/salon/hi-girls-7" class="btn btn-primary" data-i18n="hero.cta">Umów
+                            wizytę online</a>
                         <a href="#cennik" class="btn btn-outline" data-i18n="hero.cta2">Zobacz cennik</a>
                     </div>
                     <div class="hero-proof">
                         <div class="stars" id="heroStars" aria-hidden="true"></div>
-                        <span class="hero-proof-text" data-i18n="hero.rating">4,9/5 na podstawie 180+ opinii</span>
+                        <span class="hero-proof-text" data-i18n="hero.rating">5,0/5 w Google</span>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -141,8 +144,8 @@
                     <span class="hero-badge" data-i18n="services.featured">Nasza specjalność</span>
                     <div class="hero-float">
                         <div class="stars" id="heroFloatStars" aria-hidden="true"></div>
-                        <strong>4,9<span>/5</span></strong>
-                        <small data-i18n="reviews.ratingLabel">średnia z 180+ opinii</small>
+                        <strong>5,0<span>/5</span></strong>
+                        <small data-i18n="reviews.ratingLabel">Ocena w Google</small>
                     </div>
                 </div>
             </div>
@@ -161,7 +164,8 @@
                 <div class="section-head reveal">
                     <span class="eyebrow" data-i18n="eyebrow.values">Dlaczego Hi Girls</span>
                     <h2 data-i18n="values.title">Dlaczego kobiety wybierają Hi Girls</h2>
-                    <p data-i18n="values.subtitle">Cztery powody, dla których wizyta u nas to czysta przyjemność.</p>
+                    <p data-i18n="values.subtitle">Nasza zasada pięciu gwiazdek: Twoje zadowolenie jest najważniejsze.
+                        Warszawska jakość obsługi w Mławie.</p>
                 </div>
                 <div class="values-grid" id="valuesGrid"></div>
             </div>
@@ -210,13 +214,13 @@
             <div class="container">
                 <div class="section-head reveal">
                     <span class="eyebrow" data-i18n="eyebrow.reviews">Opinie klientek</span>
-                    <h2 data-i18n="reviews.title">Zaufały nam setki klientek</h2>
+                    <h2 data-i18n="reviews.title">Wasze opinie</h2>
                     <p data-i18n="reviews.subtitle">Prawdziwe opinie po wizytach w naszym salonie.</p>
                 </div>
                 <div class="reviews-summary reveal">
                     <div class="stars" id="reviewsStars" aria-hidden="true"></div>
-                    <strong>4,9</strong>
-                    <span data-i18n="reviews.ratingLabel">średnia z 180+ opinii</span>
+                    <strong>5,0</strong>
+                    <span data-i18n="reviews.ratingLabel">Ocena w Google</span>
                 </div>
                 <div class="reviews-grid" id="reviewsGrid"></div>
             </div>
@@ -235,146 +239,10 @@
                             data-i18n="blog.cta">Odwiedź bloga</a>
                     </div>
                     <div class="blog-visual" aria-hidden="true">
-                        <img src="assets/team-2.jpg" alt="" loading="lazy" />
-                        <img src="assets/team-3.jpg" alt="" loading="lazy" />
-                        <img src="assets/team-4.jpg" alt="" loading="lazy" />
-                        <img src="assets/team-5.jpg" alt="" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Booking -->
-        <section class="booking" id="booking">
-            <div class="container">
-                <div class="section-head reveal">
-                    <span class="eyebrow" data-i18n="eyebrow.booking">Rezerwacja online</span>
-                    <h2 data-i18n="booking.title">Umów wizytę</h2>
-                    <p data-i18n="booking.subtitle">Zarezerwuj termin online — bez dzwonienia.</p>
-                </div>
-
-                <p class="booking-trust reveal" data-i18n="booking.trust">Bez przedpłaty · Potwierdzenie od ręki ·
-                    Odwołasz w każdej chwili</p>
-
-                <div class="booking-wrap">
-                    <div class="booking-tabs" role="tablist">
-                        <button class="booking-tab active" id="tabCustomer" role="tab" aria-selected="true"
-                            data-i18n="booking.tabCustomer">Rezerwacja online</button>
-                        <button class="booking-tab" id="tabStaff" role="tab" aria-selected="false"
-                            data-i18n="booking.tabStaff">Panel pracownika</button>
-                    </div>
-
-                    <!-- Customer booking panel -->
-                    <div class="booking-panel" id="panelCustomer" role="tabpanel">
-                        <form id="customerForm" novalidate>
-                            <div class="form-grid">
-                                <div class="field">
-                                    <label for="c-name" data-i18n="booking.name">Imię i nazwisko</label>
-                                    <input type="text" id="c-name" name="name" autocomplete="name" required />
-                                </div>
-                                <div class="field">
-                                    <label for="c-phone" data-i18n="booking.phone">Telefon</label>
-                                    <input type="tel" id="c-phone" name="phone" autocomplete="tel" required />
-                                </div>
-                                <div class="field full">
-                                    <label for="c-email" data-i18n="booking.email">E-mail (opcjonalnie)</label>
-                                    <input type="email" id="c-email" name="email" autocomplete="email" />
-                                </div>
-                                <div class="field">
-                                    <label for="c-service" data-i18n="booking.service">Usługa</label>
-                                    <select id="c-service" name="service" data-role="service" required></select>
-                                </div>
-                                <div class="field">
-                                    <label for="c-stylist" data-i18n="booking.stylist">Specjalista</label>
-                                    <select id="c-stylist" name="stylist" data-role="stylist"></select>
-                                </div>
-                                <div class="field">
-                                    <label for="c-date" data-i18n="booking.date">Data</label>
-                                    <input type="date" id="c-date" name="date" data-role="date" required />
-                                </div>
-                                <div class="field">
-                                    <label for="c-time" data-i18n="booking.time">Godzina</label>
-                                    <select id="c-time" name="time" data-role="time" required></select>
-                                </div>
-                                <div class="field full">
-                                    <label for="c-notes" data-i18n="booking.notes">Uwagi (opcjonalnie)</label>
-                                    <textarea id="c-notes" name="notes"></textarea>
-                                </div>
-                            </div>
-                            <p class="form-msg" id="customerMsg" hidden></p>
-                            <div style="margin-top:20px">
-                                <button type="submit" class="btn btn-primary btn-block"
-                                    data-i18n="booking.submit">Zarezerwuj wizytę</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Staff panel -->
-                    <div class="booking-panel" id="panelStaff" role="tabpanel" hidden>
-                        <div class="pin-gate" id="pinGate">
-                            <p data-i18n="staff.pinPrompt">Podaj PIN pracownika, aby uzyskać dostęp.</p>
-                            <form id="pinForm">
-                                <div class="field">
-                                    <label for="s-pin" data-i18n="staff.pinLabel">PIN</label>
-                                    <input type="password" id="s-pin" inputmode="numeric" autocomplete="off" />
-                                </div>
-                                <p class="form-msg error" id="pinMsg" hidden></p>
-                                <div style="margin-top:16px">
-                                    <button type="submit" class="btn btn-primary btn-block"
-                                        data-i18n="staff.pinSubmit">Zaloguj</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="staff-content" id="staffContent" hidden>
-                            <div class="staff-toolbar">
-                                <h4 data-i18n="staff.newBooking">Dodaj rezerwację dla klienta</h4>
-                                <button class="link-btn" id="staffLogout" data-i18n="staff.logout">Wyloguj</button>
-                            </div>
-                            <form id="staffForm" novalidate>
-                                <div class="form-grid">
-                                    <div class="field">
-                                        <label for="s-name" data-i18n="booking.name">Imię i nazwisko</label>
-                                        <input type="text" id="s-name" name="name" required />
-                                    </div>
-                                    <div class="field">
-                                        <label for="s-phone" data-i18n="booking.phone">Telefon</label>
-                                        <input type="tel" id="s-phone" name="phone" required />
-                                    </div>
-                                    <div class="field">
-                                        <label for="s-service" data-i18n="booking.service">Usługa</label>
-                                        <select id="s-service" name="service" data-role="service" required></select>
-                                    </div>
-                                    <div class="field">
-                                        <label for="s-stylist" data-i18n="booking.stylist">Specjalista</label>
-                                        <select id="s-stylist" name="stylist" data-role="stylist"></select>
-                                    </div>
-                                    <div class="field">
-                                        <label for="s-date" data-i18n="booking.date">Data</label>
-                                        <input type="date" id="s-date" name="date" data-role="date" required />
-                                    </div>
-                                    <div class="field">
-                                        <label for="s-time" data-i18n="booking.time">Godzina</label>
-                                        <select id="s-time" name="time" data-role="time" required></select>
-                                    </div>
-                                    <div class="field full">
-                                        <label for="s-notes" data-i18n="booking.notes">Uwagi (opcjonalnie)</label>
-                                        <textarea id="s-notes" name="notes"></textarea>
-                                    </div>
-                                </div>
-                                <p class="form-msg" id="staffMsg" hidden></p>
-                                <div style="margin-top:16px">
-                                    <button type="submit" class="btn btn-primary btn-block"
-                                        data-i18n="booking.submit">Zarezerwuj wizytę</button>
-                                </div>
-                            </form>
-
-                            <hr class="staff-divider" />
-                            <div class="staff-toolbar">
-                                <h4 data-i18n="staff.list">Nadchodzące wizyty</h4>
-                            </div>
-                            <div class="booking-list" id="bookingList"></div>
-                        </div>
+                        <img src="assets/team.jpg" alt="" loading="lazy" />
+                        <img src="assets/martyna.jpg" alt="" loading="lazy" />
+                        <img src="assets/paulina.jpg" alt="" loading="lazy" />
+                        <img src="assets/walentyna.jpg" alt="" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -413,9 +281,9 @@
         <div class="container sticky-cta-inner">
             <div class="sticky-cta-text">
                 <div class="stars" id="stickyStars" aria-hidden="true"></div>
-                <span data-i18n="sticky.text">Wolne terminy w tym tygodniu</span>
+                <span data-i18n="sticky.text">Twoja chwila dla siebie</span>
             </div>
-            <a href="#booking" class="btn btn-primary" data-i18n="sticky.cta">Umów wizytę</a>
+            <a href="https://saloner.pl/salon/hi-girls-7" class="btn btn-primary" data-i18n="sticky.cta">Umów wizytę</a>
         </div>
     </div>
 
@@ -439,7 +307,7 @@
                         <li><a href="#services" data-i18n="services.title">Nasze usługi</a></li>
                         <li><a href="#cennik" data-i18n="nav.cennik">Cennik</a></li>
                         <li><a href="#reviews" data-i18n="eyebrow.reviews">Opinie klientek</a></li>
-                        <li><a href="#booking" data-i18n="nav.book">Umów wizytę</a></li>
+                        <li><a href="https://saloner.pl/salon/hi-girls-7" data-i18n="nav.book">Umów wizytę</a></li>
                     </ul>
                 </nav>
                 <div class="footer-col">

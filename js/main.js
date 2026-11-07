@@ -46,12 +46,10 @@
         const grid = $("#teamGrid");
         grid.innerHTML = TEAM.map((m) => `
       <article class="team-card reveal">
-        <div class="team-photo"><img src="${m.photo}" alt="${m.name}" loading="lazy" /></div>
+        ${m.photo ? `<div class="team-photo"><img src="${m.photo}" alt="${m.name}" loading="lazy" /></div>` : ""}
         <div class="team-body">
           <h3>${m.name}</h3>
           <p class="role">${tv(m.role)}</p>
-          <p class="bio">${tv(m.bio)}</p>
-          <div class="tags">${tv(m.tags).map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>
         </div>
       </article>`).join("");
     }
@@ -68,7 +66,7 @@
           <div class="service-chips">${s.items.map((i) => `<span class="chip">${tv(i.name)}</span>`).join("")}</div>
           <div class="service-foot">
             ${s.from ? `<span class="service-from">${tv(s.from)}</span>` : ""}
-            <a href="#booking" class="btn btn-outline btn-sm" data-service="${s.id}">${t("services.book")}</a>
+            <a href="${SITE.bookingUrl}" class="btn btn-outline btn-sm">${t("services.book")}</a>
           </div>
         </div>
       </article>`).join("");
@@ -415,12 +413,6 @@
         renderReviews();
         renderContact();
         renderStars();
-        // Re-fill selects so option labels follow the active language.
-        populateServiceStylist($("#panelCustomer"));
-        if (!$("#staffContent").hidden) {
-            populateServiceStylist($("#panelStaff"));
-            renderBookingList();
-        }
         setupReveal();
     }
 
@@ -437,10 +429,9 @@
         const gate = $("#comingSoon");
         if (!gate) return false;
 
-        // Site not ready yet — keep everything behind the "under construction" gate.
-        document.body.classList.add("coming-soon-active");
-        gate.hidden = false;
-        return true;
+        document.body.classList.remove("coming-soon-active");
+        gate.hidden = true;
+        return false;
     }
 
     /* -------------------------------- Init -------------------------------- */
@@ -458,7 +449,6 @@
         renderContact();
         renderStars();
         setupNav();
-        setupBooking();
         setupLang();
         setupSticky();
         setupReveal();

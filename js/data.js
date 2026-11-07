@@ -7,6 +7,7 @@
 
 const SITE = {
     brand: "Hi Girls",
+    bookingUrl: "https://saloner.pl/salon/hi-girls-7",
     tagline: { pl: "Specjaliści od blondu", en: "Blonde Specialists" },
     // TODO: replace the phone and social links below with the salon's real details.
     phone: "+48 538 423 793",
@@ -32,71 +33,16 @@ const SITE = {
 
 // Team members shown in "Poznaj nasz zespół".
 const TEAM = [
-    {
-        id: "martyna",
-        name: "Martyna Kowalska",
-        role: { pl: "Właścicielka & Kolorystka", en: "Owner & Colorist" },
-        bio: {
-            pl: "Miłośniczka perfekcyjnego blondu i zdrowych włosów. Ponad 10 lat doświadczenia.",
-            en: "In love with flawless blonde and healthy hair. 10+ years of experience.",
-        },
-        tags: { pl: ["Blond", "Koloryzacja"], en: ["Blonde", "Coloring"] },
-        photo: "assets/team-1.jpg",
-    },
-    {
-        id: "anna",
-        name: "Anna Nowak",
-        role: { pl: "Kolorystka & Stylistka", en: "Colorist & Stylist" },
-        bio: {
-            pl: "Balayage, sombre i rozświetlenia — uwielbia rozświetlać włosy słońcem.",
-            en: "Balayage, sombre and highlights — loves sun-kissed hair.",
-        },
-        tags: { pl: ["Balayage", "Strzyżenie"], en: ["Balayage", "Cut"] },
-        photo: "assets/team-2.jpg",
-    },
-    {
-        id: "klaudia",
-        name: "Klaudia Wiśniewska",
-        role: { pl: "Specjalistka od przedłużania", en: "Extensions Specialist" },
-        bio: {
-            pl: "Naturalne przedłużanie i zagęszczanie włosów metodą taśmową i keratynową.",
-            en: "Natural tape-in and keratin hair extensions and volume.",
-        },
-        tags: { pl: ["Przedłużanie"], en: ["Extensions"] },
-        photo: "assets/team-3.jpg",
-    },
-    {
-        id: "paulina-w",
-        name: "Paulina Wójcik",
-        role: { pl: "Wizażystka & Stylistka", en: "Makeup Artist & Stylist" },
-        bio: {
-            pl: "Makijaż dzienny, wieczorowy i ślubny oraz upięcia okolicznościowe.",
-            en: "Day, evening and bridal makeup plus occasion updos.",
-        },
-        tags: { pl: ["Makijaż", "Upięcia"], en: ["Makeup", "Updos"] },
-        photo: "assets/team-4.jpg",
-    },
-    {
-        id: "paulina-l",
-        name: "Paulina Lewandowska",
-        role: { pl: "Kosmetolog · Brwi i rzęsy", en: "Beautician · Brows & Lashes" },
-        bio: {
-            pl: "Stylizacja brwi, laminacja i przedłużanie rzęs — spojrzenie, które zachwyca.",
-            en: "Brow styling, lamination and lash extensions — a captivating look.",
-        },
-        tags: { pl: ["Brwi", "Rzęsy"], en: ["Brows", "Lashes"] },
-        photo: "assets/team-5.jpg",
-    },
+    { id: "martyna", name: "Martyna", role: { pl: "Specjalistka Hi Girls", en: "Hi Girls specialist" }, photo: "assets/martyna.jpg" },
+    { id: "paulina", name: "Paulina", role: { pl: "Specjalistka Hi Girls", en: "Hi Girls specialist" }, photo: "assets/paulina.jpg" },
+    { id: "walentyna", name: "Walentyna", role: { pl: "Specjalistka Hi Girls", en: "Hi Girls specialist" }, photo: "assets/walentyna.jpg" },
+    { id: "anna", name: "Anna", role: { pl: "Specjalistka Hi Girls", en: "Hi Girls specialist" }, photo: "assets/anna.png" },
 ];
 
 // Stylists selectable in the booking form.
 const STYLISTS = [
     { id: "any", name: { pl: "Dowolny specjalista", en: "Any specialist" } },
-    { id: "martyna", name: { pl: "Martyna Kowalska", en: "Martyna Kowalska" } },
-    { id: "anna", name: { pl: "Anna Nowak", en: "Anna Nowak" } },
-    { id: "klaudia", name: { pl: "Klaudia Wiśniewska", en: "Klaudia Wiśniewska" } },
-    { id: "paulina-w", name: { pl: "Paulina Wójcik", en: "Paulina Wójcik" } },
-    { id: "paulina-l", name: { pl: "Paulina Lewandowska", en: "Paulina Lewandowska" } },
+    ...TEAM.map((member) => ({ id: member.id, name: { pl: member.name, en: member.name } })),
 ];
 
 // Service categories with individual services and prices (PLN).
@@ -106,38 +52,33 @@ const SERVICES = [
         icon: "🎨",
         title: { pl: "Koloryzacje", en: "Coloring" },
         featured: true,
-        from: { pl: "od 120 zł", en: "from 120 zł" },
+        from: { pl: "od 150 zł", en: "from 150 zł" },
         desc: {
-            pl: "Nasza specjalność — perfekcyjny, zdrowy blond. Balayage, sombre, rozświetlenia i korekty koloru.",
-            en: "Our specialty — flawless, healthy blonde. Balayage, sombre, highlights and colour correction.",
+            pl: "Blondy to nasza pasja. Koloryzacja, balayage, Airtouch i pielęgnacja dopasowane do Twoich włosów.",
+            en: "Blonde is our passion. Colouring, balayage, Airtouch and care tailored to your hair.",
         },
         items: [
-            { name: { pl: "Balayage / Sombre", en: "Balayage / Sombre" }, price: "od 350 zł" },
-            { name: { pl: "Ombre / Flamboyage", en: "Ombre / Flamboyage" }, price: "od 350 zł" },
-            { name: { pl: "Rozjaśnianie całości", en: "Full lightening" }, price: "od 300 zł" },
-            { name: { pl: "Refleksy / Baby lights", en: "Highlights / Baby lights" }, price: "od 250 zł" },
-            { name: { pl: "Tonowanie blondu", en: "Blonde toning" }, price: "od 120 zł" },
-            { name: { pl: "Cieniowanie odrostu (root melt)", en: "Root melt" }, price: "od 180 zł" },
-            { name: { pl: "Koloryzacja jednolita", en: "Single-tone colour" }, price: "od 150 zł" },
-            { name: { pl: "Korekta koloru", en: "Colour correction" }, price: "wycena indyw." },
+            { name: { pl: "Koloryzacja globalna + pielęgnacja", en: "Full colour + care" }, price: "280 - 330 zł" },
+            { name: { pl: "Front Blond / Face Framing", en: "Front Blond / Face Framing" }, price: "300 - 400 zł" },
+            { name: { pl: "Balayage + tonowanie", en: "Balayage + toning" }, price: "450 - 500 zł" },
+            { name: { pl: "Airtouch + tonowanie", en: "Airtouch + toning" }, price: "600 - 800 zł" },
+            { name: { pl: "Dekoloryzacja włosów farbowanych", en: "Colour removal for dyed hair" }, price: "400 - 800 zł" },
+            { name: { pl: "Odrost + odświeżenie koloru", en: "Roots + colour refresh" }, price: "300 - 450 zł" },
+            { name: { pl: "Tonowanie", en: "Toning" }, price: "150 - 230 zł" },
         ],
     },
     {
         id: "strzyzenie",
         icon: "✂️",
-        title: { pl: "Strzyżenie & stylizacja", en: "Cuts & Styling" },
-        from: { pl: "od 40 zł", en: "from 40 zł" },
+        title: { pl: "Stylizacja włosów", en: "Hair styling" },
+        from: { pl: "od 100 zł", en: "from 100 zł" },
         desc: {
-            pl: "Strzyżenia, modelowanie oraz upięcia i fryzury okolicznościowe na każdą okazję.",
-            en: "Haircuts, blow-dry styling and occasion updos for any event.",
+            pl: "Modelowanie oraz fryzury okolicznościowe i upięcia na ważne chwile.",
+            en: "Blow-dry styling, occasion hairstyles and updos for special moments.",
         },
         items: [
-            { name: { pl: "Strzyżenie damskie", en: "Women's cut" }, price: "od 70 zł" },
-            { name: { pl: "Strzyżenie męskie", en: "Men's cut" }, price: "od 50 zł" },
-            { name: { pl: "Strzyżenie dziecięce", en: "Kids' cut" }, price: "od 40 zł" },
-            { name: { pl: "Modelowanie / fen", en: "Blow-dry styling" }, price: "od 50 zł" },
-            { name: { pl: "Upięcie okolicznościowe", en: "Occasion updo" }, price: "od 120 zł" },
-            { name: { pl: "Fryzura ślubna + próba", en: "Bridal hair + trial" }, price: "od 250 zł" },
+            { name: { pl: "Modelowanie włosów", en: "Blow-dry styling" }, price: "100 - 180 zł" },
+            { name: { pl: "Fryzura okolicznościowa / upięcie", en: "Occasion hairstyle / updo" }, price: "200 - 250 zł" },
         ],
     },
     {
@@ -146,49 +87,42 @@ const SERVICES = [
         title: { pl: "Przedłużanie włosów", en: "Hair Extensions" },
         from: { pl: "konsultacja gratis", en: "free consultation" },
         desc: {
-            pl: "Naturalne zagęszczanie i wydłużanie włosów metodą taśmową, keratynową i nano ringami.",
-            en: "Natural volume and length with tape-in, keratin and nano-ring methods.",
+            pl: "Więcej długości i objętości. Konsultacja jest bezpłatna; ceny usług nie obejmują kosztu włosów.",
+            en: "More length and volume. Consultation is free; service prices exclude the cost of hair.",
         },
         items: [
-            { name: { pl: "Konsultacja + dobór", en: "Consultation + matching" }, price: "gratis" },
-            { name: { pl: "Metoda taśmowa", en: "Tape-in method" }, price: "od 600 zł" },
-            { name: { pl: "Metoda keratynowa", en: "Keratin method" }, price: "od 800 zł" },
-            { name: { pl: "Nano ringi", en: "Nano rings" }, price: "od 700 zł" },
-            { name: { pl: "Korekta / przepięcie", en: "Maintenance / re-fit" }, price: "od 250 zł" },
+            { name: { pl: "Konsultacja przedłużania włosów", en: "Hair extensions consultation" }, price: "0 zł" },
+            { name: { pl: "Przedłużanie włosów — usługa", en: "Hair extensions — service" }, price: "500 zł" },
+            { name: { pl: "Zagęszczenie włosów — usługa", en: "Hair thickening — service" }, price: "250 - 300 zł" },
         ],
     },
     {
         id: "kosmetyki",
         icon: "🧴",
         title: { pl: "Pielęgnacja & kosmetyki", en: "Care & Cosmetics" },
-        from: { pl: "od 45 zł", en: "from 45 zł" },
+        from: { pl: "od 130 zł", en: "from 130 zł" },
         desc: {
-            pl: "Regeneracja, wygładzanie i nawilżanie włosów — Olaplex, botoks, keratyna i nanoplastia.",
-            en: "Regeneration, smoothing and hydration — Olaplex, botox, keratin and nanoplastia.",
+            pl: "Profesjonalna pielęgnacja i botoks na włosy. W salonie dostępne są także kosmetyki do domu.",
+            en: "Professional hair care and hair botox. Home-care products are also available at the salon.",
         },
         items: [
-            { name: { pl: "Zabieg regenerujący Olaplex", en: "Olaplex regeneration" }, price: "od 90 zł" },
-            { name: { pl: "Botoks na włosy", en: "Hair botox" }, price: "od 150 zł" },
-            { name: { pl: "Keratynowe prostowanie", en: "Keratin straightening" }, price: "od 250 zł" },
-            { name: { pl: "Nanoplastia", en: "Nanoplastia" }, price: "od 300 zł" },
-            { name: { pl: "Nawilżanie i pielęgnacja", en: "Hydration & care" }, price: "od 80 zł" },
-            { name: { pl: "Kosmetyki do domu", en: "Home-care products" }, price: "od 45 zł" },
+            { name: { pl: "Pielęgnacja włosów", en: "Hair care" }, price: "130 zł" },
+            { name: { pl: "Botoks", en: "Hair botox" }, price: "200 - 350 zł" },
         ],
     },
     {
         id: "brwi",
         icon: "👁️",
         title: { pl: "Brwi & rzęsy", en: "Brows & Lashes" },
-        from: { pl: "od 45 zł", en: "from 45 zł" },
+        from: { pl: "od 120 zł", en: "from 120 zł" },
         desc: {
-            pl: "Stylizacja brwi i rzęs, która podkreśli spojrzenie — henna, laminacja i przedłużanie.",
-            en: "Brow and lash styling that highlights your gaze — tint, lamination and extensions.",
+            pl: "Laminacja brwi i rzęs oraz farbowanie — osobno lub w pakiecie.",
+            en: "Brow and lash lamination and tinting — individually or as a package.",
         },
         items: [
-            { name: { pl: "Regulacja i henna brwi", en: "Brow shaping & tint" }, price: "od 45 zł" },
-            { name: { pl: "Laminacja brwi", en: "Brow lamination" }, price: "od 90 zł" },
-            { name: { pl: "Lifting i laminacja rzęs", en: "Lash lift & lamination" }, price: "od 120 zł" },
-            { name: { pl: "Przedłużanie rzęs", en: "Lash extensions" }, price: "od 150 zł" },
+            { name: { pl: "Brwi — laminacja + farbowanie", en: "Brows — lamination + tinting" }, price: "120 zł" },
+            { name: { pl: "Laminacja rzęs", en: "Lash lamination" }, price: "120 zł" },
+            { name: { pl: "Pakiet laminacji brwi i rzęs + farbowanie", en: "Brow and lash lamination + tinting package" }, price: "220 zł" },
         ],
     },
     {
@@ -201,10 +135,10 @@ const SERVICES = [
             en: "Day, evening, occasion and bridal makeup tailored to the moment.",
         },
         items: [
-            { name: { pl: "Makijaż dzienny", en: "Day makeup" }, price: "od 120 zł" },
-            { name: { pl: "Makijaż wieczorowy", en: "Evening makeup" }, price: "od 160 zł" },
-            { name: { pl: "Makijaż okolicznościowy", en: "Occasion makeup" }, price: "od 140 zł" },
-            { name: { pl: "Makijaż ślubny + próbny", en: "Bridal makeup + trial" }, price: "od 350 zł" },
+            { name: { pl: "Makijaż dzienny", en: "Day makeup" }, price: "120 zł" },
+            { name: { pl: "Makijaż okolicznościowy", en: "Occasion makeup" }, price: "200 - 220 zł" },
+            { name: { pl: "Makijaż ślubny", en: "Bridal makeup" }, price: "250 zł" },
+            { name: { pl: "Makijaż próbny ślubny", en: "Bridal makeup trial" }, price: "200 zł" },
         ],
     },
 ];
@@ -228,17 +162,16 @@ const BOOKING_CONFIG = {
 
 // Aggregate rating used for social proof (hero chip, testimonials header).
 const RATING = {
-    score: "4.9",
-    count: 180,
+    score: "5.0",
     source: { pl: "opinii Google", en: "Google reviews" },
 };
 
 // Headline numbers shown in the trust bar beneath the hero.
 const STATS = [
-    { value: "10+", label: { pl: "lat doświadczenia", en: "years of experience" } },
-    { value: "2000+", label: { pl: "zadowolonych klientek", en: "happy clients" } },
-    { value: "4.9★", label: { pl: "średnia z opinii", en: "average rating" } },
-    { value: "5", label: { pl: "specjalistek w zespole", en: "specialists on the team" } },
+    { value: "Blond", label: { pl: "nasza specjalność", en: "our specialty" } },
+    { value: "Hi Girls", label: { pl: "salon dla kobiet", en: "a salon for women" } },
+    { value: "5.0★", label: { pl: "ocena w Google", en: "Google rating" } },
+    { value: "4", label: { pl: "specjalistki w zespole", en: "specialists on the team" } },
 ];
 
 // "Why us" value propositions (icon keys resolve to inline SVG in main.js).
@@ -253,18 +186,18 @@ const VALUES = [
     },
     {
         icon: "leaf",
-        title: { pl: "Renomowane kosmetyki", en: "Premium products" },
+        title: { pl: "Świadoma pielęgnacja", en: "Thoughtful care" },
         text: {
-            pl: "Pracujemy na Olaplex, Wella i K18 — pielęgnacja klasy premium przy każdej wizycie.",
-            en: "We work with Olaplex, Wella and K18 — premium care at every single visit.",
+            pl: "Dbamy o kondycję włosów na każdym etapie — od koloryzacji po profesjonalną pielęgnację i rytuały.",
+            en: "We care for your hair at every stage — from colouring to professional treatments and rituals.",
         },
     },
     {
         icon: "calendar",
         title: { pl: "Rezerwacja online 24/7", en: "24/7 online booking" },
         text: {
-            pl: "Zarezerwuj termin w 30 sekund, o dowolnej porze — bez dzwonienia i czekania.",
-            en: "Book in 30 seconds, at any hour — no phone calls, no waiting on hold.",
+            pl: "Wybierz usługę i dostępny termin na naszej stronie Saloner — o dogodnej dla Ciebie porze.",
+            en: "Choose a service and an available appointment on our Saloner page whenever it suits you.",
         },
     },
     {
@@ -280,27 +213,27 @@ const VALUES = [
 // Client testimonials shown in the reviews section.
 const TESTIMONIALS = [
     {
-        name: "Aleksandra K.",
-        service: { pl: "Balayage", en: "Balayage" },
+        name: "Izabela Jankowska",
+        service: { pl: "Opinia Google", en: "Google review" },
         quote: {
-            pl: "Najlepszy blond, jaki miałam. Włosy zdrowe, kolor trzyma się miesiącami, a atmosfera w salonie cudowna.",
-            en: "The best blonde I've ever had. Healthy hair, color that lasts for months, and a wonderful atmosphere.",
+            pl: "Absolutnie wyjątkowe miejsce! Dziewczyny tworzą niesamowity klimat – od samego progu wita nas uśmiech, ciepła atmosfera i pełen profesjonalizm.Widać, że wkładają w to całe swoje serce i ogromną wiedzę. Z całego serca polecam każdemu, kto szuka fryzjera z pasją. Na pewno wrócę nie raz! ❤️",
+            en: "An absolutely exceptional place! The girls create an amazing atmosphere – from the moment you step inside, you are greeted with a smile, warmth and complete professionalism. You can see they put their whole hearts and extensive knowledge into it. I wholeheartedly recommend it to anyone looking for a passionate hairdresser. I will definitely return more than once! ❤️",
         },
     },
     {
-        name: "Natalia W.",
-        service: { pl: "Przedłużanie włosów", en: "Hair extensions" },
+        name: "Magdalena Rutkowska",
+        service: { pl: "Opinia Google", en: "Google review" },
         quote: {
-            pl: "Przedłużanie zrobione perfekcyjnie — nikt nie wierzy, że to nie moje własne włosy. Polecam całym sercem!",
-            en: "Extensions done to perfection — no one believes they aren't my own hair. Highly recommend!",
+            pl: "Świetne miejsce, w którym od wejścia czujesz się zaopiekowana. Indywidualne i profesjonalne podejście do klienta. Panie, które tam pracują znają się na rzeczy i robią cuda. Miła i przyjazna atmosfera połączona z perfekcją wykonania powoduje, że chce się tam wracać! Ja wrócę na pewno!🥰",
+            en: "A wonderful place where you feel cared for from the moment you walk in. An individual and professional approach to each client. The women who work there know their craft and work wonders. The warm, friendly atmosphere combined with perfect workmanship makes you want to return! I certainly will!🥰",
         },
     },
     {
-        name: "Karolina M.",
-        service: { pl: "Koloryzacja + Olaplex", en: "Color + Olaplex" },
+        name: "Malwina Michalak",
+        service: { pl: "Opinia Google", en: "Google review" },
         quote: {
-            pl: "Przyszłam z przesuszonymi włosami po innym salonie. Dziewczyny uratowały kolor i kondycję. Wracam co miesiąc.",
-            en: "I came in with over-dried hair from another salon. The girls rescued the color and condition. I'm back every month.",
+            pl: "Od samego wejścia do Hi Girls aż do wyjścia z salonu , klient jest w centrum uwagi, kobiety tam pracujące są przemiłe i bardzo pomocne w doborze odpowiedniej fryzury czy cięcia . Nowoczesny salon , personel dbający o każdy szczegół , klient jest częstowany po przyjściu kawą czy herbatą a także słodką przekąską z czym nie miałam do czynienia w żadnym odwiedzonym przezemnie salonie. 10 na 10 polecam 👍👍👍",
+            en: "From entering Hi Girls to leaving the salon, the client is the centre of attention. The women working there are lovely and very helpful in choosing the right hairstyle or cut. A modern salon with staff who care about every detail. On arrival, clients are offered coffee or tea and a sweet snack, something I had not experienced in any other salon I have visited. 10 out of 10, highly recommended 👍👍👍",
         },
     },
 ];

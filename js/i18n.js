@@ -34,7 +34,7 @@ const I18N = {
 
         "cennik.title": "Cennik",
         "cennik.subtitle": "Ceny orientacyjne — ostateczna wycena po konsultacji",
-        "cennik.note": "* Ceny mogą się różnić w zależności od długości i gęstości włosów.",
+        "cennik.note": "* Ostateczną cenę ustalamy indywidualnie przed wizytą, zależnie od długości, gęstości i kondycji włosów, zużycia produktów, czasu pracy i zakresu usługi. Ceny przedłużania i zagęszczania nie obejmują kosztu włosów.",
 
         "blog.eyebrow": "Bądź na bieżąco",
         "blog.title": "Zajrzyj na naszego bloga",
@@ -115,21 +115,21 @@ const I18N = {
         "eyebrow.reviews": "Opinie klientek",
         "eyebrow.booking": "Rezerwacja online",
 
-        "hero.rating": "4,9/5 na podstawie 180+ opinii",
+        "hero.rating": "5,0/5 w Google",
         "hero.trust1": "10+ lat doświadczenia",
         "hero.trust2": "Bez przedpłaty",
         "hero.trust3": "Potwierdzenie od ręki",
 
         "values.title": "Dlaczego kobiety wybierają Hi Girls",
-        "values.subtitle": "Cztery powody, dla których wizyta u nas to czysta przyjemność.",
+        "values.subtitle": "Nasza zasada pięciu gwiazdek: Twoje zadowolenie jest najważniejsze. Tworzymy w Mławie nowy standard — warszawską jakość obsługi, profesjonalną pielęgnację i chwilę tylko dla Ciebie.",
 
-        "reviews.title": "Zaufały nam setki klientek",
+        "reviews.title": "Wasze opinie",
         "reviews.subtitle": "Prawdziwe opinie po wizytach w naszym salonie.",
-        "reviews.ratingLabel": "średnia z 180+ opinii",
+        "reviews.ratingLabel": "Ocena w Google",
 
         "booking.trust": "Bez przedpłaty · Potwierdzenie od ręki · Odwołasz w każdej chwili",
 
-        "sticky.text": "Wolne terminy w tym tygodniu",
+        "sticky.text": "Twoja chwila dla siebie",
         "sticky.cta": "Umów wizytę",
 
         "footer.explore": "Nawigacja",
@@ -166,7 +166,7 @@ const I18N = {
 
         "cennik.title": "Pricing",
         "cennik.subtitle": "Indicative prices — final quote after consultation",
-        "cennik.note": "* Prices may vary depending on hair length and thickness.",
+        "cennik.note": "* The final price is agreed individually before your appointment based on hair length, thickness and condition, products used, working time and service scope. Extension and thickening prices exclude the cost of hair.",
 
         "blog.eyebrow": "Stay in touch",
         "blog.title": "Visit our blog",
@@ -247,21 +247,21 @@ const I18N = {
         "eyebrow.reviews": "Client reviews",
         "eyebrow.booking": "Online booking",
 
-        "hero.rating": "4.9/5 from 180+ reviews",
+        "hero.rating": "5.0/5 on Google",
         "hero.trust1": "10+ years of experience",
         "hero.trust2": "No prepayment",
         "hero.trust3": "Instant confirmation",
 
         "values.title": "Why women choose Hi Girls",
-        "values.subtitle": "Four reasons a visit with us is a genuine pleasure.",
+        "values.subtitle": "Our five-star principle: your satisfaction comes first. We are creating a new standard in Mława — Warsaw-level service, professional care and a moment just for you.",
 
-        "reviews.title": "Trusted by hundreds of clients",
+        "reviews.title": "Your reviews",
         "reviews.subtitle": "Real reviews after visits to our salon.",
-        "reviews.ratingLabel": "average from 180+ reviews",
+        "reviews.ratingLabel": "Google rating",
 
         "booking.trust": "No prepayment · Instant confirmation · Cancel anytime",
 
-        "sticky.text": "Openings available this week",
+        "sticky.text": "A moment just for you",
         "sticky.cta": "Book now",
 
         "footer.explore": "Explore",

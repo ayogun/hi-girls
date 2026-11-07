@@ -1708,6 +1708,32 @@ section {
     color: rgba(247, 239, 230, .6);
 }
 
+.quick-contact {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.quick-contact a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 6px;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (min-width: 521px) {
+    .quick-contact {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
 /* Responsive — new components */
 @media (max-width: 960px) {
     .values-grid {
