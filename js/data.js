@@ -36,7 +36,7 @@ const TEAM = [
     { id: "martyna", name: "Martyna", role: { pl: "Specjalistka Hi Girls", en: "Hi Girls specialist" }, photo: "assets/martyna.jpg" },
     { id: "paulina", name: "Paulina", role: { pl: "Specjalistka Hi Girls", en: "Hi Girls specialist" }, photo: "assets/paulina.jpg" },
     { id: "walentyna", name: "Walentyna", role: { pl: "Specjalistka Hi Girls", en: "Hi Girls specialist" }, photo: "assets/walentyna.jpg" },
-    { id: "anna", name: "Anna", role: { pl: "Specjalistka Hi Girls", en: "Hi Girls specialist" }, photo: "assets/anna.png" },
+    { id: "anna", name: "Anna", role: { pl: "Specjalistka Hi Girls", en: "Hi Girls specialist" }, photo: "assets/anna.jpg" },
 ];
 
 // Stylists selectable in the booking form.
@@ -169,7 +169,7 @@ const RATING = {
 // Headline numbers shown in the trust bar beneath the hero.
 const STATS = [
     { value: "Blond", label: { pl: "nasza specjalność", en: "our specialty" } },
-    { value: "Hi Girls", label: { pl: "salon dla kobiet", en: "a salon for women" } },
+    { value: "Ty", label: { pl: "Twoje zadowolenie jest najważniejsze", en: "Your satisfaction comes first" } },
     { value: "5.0★", label: { pl: "ocena w Google", en: "Google rating" } },
     { value: "4", label: { pl: "specjalistki w zespole", en: "specialists on the team" } },
 ];
